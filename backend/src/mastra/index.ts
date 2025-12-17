@@ -8,7 +8,6 @@ import session from "express-session";
 import { createClient } from "redis"; 
 import { RedisStore } from "connect-redis"; 
 
-const SESSION_SECRET = "jh8b5blapg9im9p747g1h"; 
 
 // Initialize Redis client
 let redisClient = createClient({
@@ -42,7 +41,7 @@ app.use(cookieParser());
 // Session Middleware configured with the working settings
 app.use(session({
     store: redisStore,
-    secret: SESSION_SECRET, 
+    secret: process.env.SESSION_SECRET, 
     resave: false,        
     saveUninitialized: true, // Kept at 'true' as this works with your current setup
     cookie: { 
