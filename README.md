@@ -10,7 +10,7 @@ It is **NOT production-ready** and **should not be deployed to production enviro
 
 ## Tech Stack
 
-* Backend: Node.js, TypeScript, Mastra AI, Better Auth, Gemini
+* Backend: Node.js, TypeScript, Mastra AI, passport auth, Gemini
 * Frontend: React, Vite, Tailwind CSS
 * Auth: Google OAuth
 * Cache/Session: Redis (Docker)
