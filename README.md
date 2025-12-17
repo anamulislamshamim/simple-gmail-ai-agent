@@ -1,3 +1,4 @@
+![Architectural Diagram](images/gmail_ai_agent_2.png)
 # Gmail AI Agent (Local Setup Guide)
 
 This project is a **simple AI agent** that can access a user’s Gmail (with permission) and respond to chat prompts like *“list unread emails”*.
