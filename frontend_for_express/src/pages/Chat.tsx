@@ -10,7 +10,8 @@ export default function Chat() {
     fetch(`${import.meta.env.VITE_BASE_URL}/api/chat`, {
       method: "OPTIONS",
       credentials: "include",
-    }).catch(() => {
+    }).catch((err) => {
+      console.log(err);
       navigate("/login");
     });
   }, []);

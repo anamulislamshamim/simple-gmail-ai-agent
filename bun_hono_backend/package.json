@@ -1,0 +1,28 @@
+{
+  "name": "bun_hono_backend",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/pg": "^8.16.0",
+    "drizzle-kit": "^0.31.8"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.6",
+    "@mastra/core": "^0.24.9",
+    "better-auth": "^1.4.7",
+    "drizzle-orm": "^0.45.1",
+    "googleapis": "^169.0.0",
+    "hono": "^4.11.1",
+    "ioredis": "^5.8.2",
+    "mastra": "^0.18.9",
+    "pg": "^8.16.3",
+    "redis": "^5.10.0",
+    "zod": "^4.2.1",
+    "zod-validator": "^1.0.1"
+  }
+}

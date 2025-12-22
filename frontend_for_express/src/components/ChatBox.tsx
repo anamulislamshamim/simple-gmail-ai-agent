@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { sendChatMessage } from "../services/api";
 import Markdown from 'react-markdown'
+import { useNavigate } from "react-router-dom";
 
 export default function ChatBox() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSend = async () => {
     if (!input.trim()) return;
