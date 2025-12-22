@@ -8,12 +8,6 @@ const app = new Hono({ strict: false });
 
 app.use(logger());
 
-app.use("/api/auth/*", async (c, next) => {
-  const allCookies = c.req.header("Cookie");
-  console.log("Cookies received by Server:", allCookies);
-  await next();
-});
-
 app.use(
   "*",
   cors({

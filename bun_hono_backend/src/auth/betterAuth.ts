@@ -16,14 +16,13 @@ export const auth = betterAuth({
 	},
 	
 	trustedOrigins: [
-		"http://localhost:5173", // Your React/Vite dev server
+		"http://localhost:5173", 
 	],
 
     advanced: {
         cookiePrefix: "session",
-        useSecureCookies: false, // Force false for localhost HTTP
+        useSecureCookies: false,
     },
-    // Add this to ensure cookies work across the Google redirect
     cookie: {
         sameSite: "lax", 
         secure: false,
@@ -31,7 +30,6 @@ export const auth = betterAuth({
 	secondaryStorage: {
 		get: async (key) => {
 			const val = await redis.get(key);
-			console.log(`Checking Redis for key [${key}]:`, val ? "FOUND" : "NOT FOUND");
 			return val;
 		},
 		set: async (key, value, ttl) => {

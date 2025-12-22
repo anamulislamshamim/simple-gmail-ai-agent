@@ -17,23 +17,3 @@ export const withAgentContext: MiddlewareHandler = async (c, next) => {
   c.set("runtimeContext", runtimeContext);
   await next();
 };
-
-
-// import { RuntimeContext } from "@mastra/core/runtime-context";
-// import type { MiddlewareHandler } from "hono";
-
-// export const withAgentContext: MiddlewareHandler = async (c, next) => {
-//   const googleAccount = c.get("googleAccount");
-
-//   const runtimeContext = new RuntimeContext<{
-//     accessToken: string;
-//   }>();
-
-//   console.log("Debug; accessToken: ", googleAccount.accessToken);
-//   runtimeContext.set("accessToken", googleAccount.accessToken);
-
-//   c.set("runtimeContext", runtimeContext);
-//   await next();
-// };
-
-
